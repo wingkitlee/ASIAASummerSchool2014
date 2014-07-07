@@ -14,6 +14,7 @@ from scipy.optimize import curve_fit
 
 # to use latex for text,
 # may not work in linux if there is not latex installed
+# can comment out if not work.
 pylab.rc('text',usetex=True)
 
 # define a fitting function
@@ -48,5 +49,8 @@ pylab.plot(x,y,'.')
 # plot fitting function
 pylab.plot(x,yfit,'k-',lw=3)
 
+# set the xlabel
 pylab.xlabel('time, t [s]')
+
+# show the figure
 pylab.show()
