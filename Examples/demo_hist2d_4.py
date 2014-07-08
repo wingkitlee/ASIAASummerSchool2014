@@ -16,7 +16,7 @@ import matplotlib.animation as animation
 # create a figure
 fig = pylab.figure()
 # get the axis
-ax = pylab.subplot(111)
+ax = pylab.subplot(111,aspect=1.0)
 
 #pylab.hold(True)
 
@@ -53,6 +53,11 @@ def animate(i):
     xyrange = [[-5.0,5.0],[-5.0,5.0]]
     H, xedges, yedges = histogram2d(x,y,range=xyrange, bins=51)
     
+    # rotation and flipping needed for correct orientation
+    # need check
+    H = rot90(H)
+    H = flipud(H)
+    
     # mask out the array
     Hmasked = ma.masked_less(H, 0.01) # ignore where value < 0.01
     
@@ -65,6 +70,9 @@ def animate(i):
     
     ax.set_xlim(-5.0,5.0)
     ax.set_ylim(-5.0,5.0)
+    ax.set_xlabel('x')
+    ax.set_ylabel('y')
+    ax.set_aspect(1.0)
 #    pylab.ylim(-5.0,5.0)
 #    pylab.draw()
     pylab.hold(False)
