@@ -1,7 +1,8 @@
 """
 Example script for reading data and plotting it
 
-it reads
+it reads the data generated from demo_gendata.py (two columns) and
+make a scattered plot
 """
 
 import numpy as np

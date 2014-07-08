@@ -4,7 +4,7 @@ Example script for generating some data
 
 # numpy for numerical stuff
 import numpy as np
-# sys for reading the command line arguement
+# sys for reading the command line argument
 import sys
 
 # simple command line arguement setup
