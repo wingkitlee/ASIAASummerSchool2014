@@ -11,7 +11,7 @@ import pylab
 
 # generating data
 # number of data points in each dimension
-N = 2000
+N = 200000
 # sigma of normal distribution
 sigma = 1.0
 # mean position of normal distribution,
