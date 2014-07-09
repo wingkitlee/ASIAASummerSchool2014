@@ -11,7 +11,7 @@ import pylab
 
 # generating data
 # number of data points in each dimension
-N = 200000
+N = 4000
 # sigma of normal distribution
 sigma = 1.0
 # mean position of normal distribution,
@@ -20,6 +20,7 @@ sigma = 1.0
 
 # random number from "normal" distribution
 # default: sigma = 1.0, mean = 0.0
+# if using import numpy as np, call np.random.randn
 x = sigma*random.randn(N)
 y = sigma*random.randn(N)
 
@@ -51,7 +52,7 @@ ax2 = pylab.subplot(122)
 # contours
 pylab.imshow(Z,extent=[-4.0,4.0,-4.0,4.0])
 #pylab.colorbar()
-#pylab.contour(X,Y,Z,3,colors='w')
+pylab.contour(X,Y,Z,3,colors='w')
 #pylab.colorbar()
 
 
